@@ -23,6 +23,9 @@ def problem3(t0, tf, n, a, b, returnlist=False):
     print("Graph of approximate solution")
     print("Time step of %f seconds." % h)
     solution = alg.euler(t0, tf, n, 0, vel)
-    print("Conclusion: Terminal velocity is about %f." % solution[n-1][1])
+    terminalvelocity = solution[n-1][1]
+    print("Conclusion: Terminal velocity is about %f." % terminalvelocity)
     if returnlist:
-        return solution
+        return solution, terminalvelocity
+    else:
+        return terminalvelocity

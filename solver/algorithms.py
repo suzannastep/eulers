@@ -18,25 +18,34 @@ def validinput(x0, xf, n):
         False if x0 > xf or if
         True otherwise
     """
-    isvalid == True
+    valid = True
     if x0 > xf:
-        isvalid = False
+        valid = False
     if int(n) != n:
-        isvalid = False
-    if isvalid == False:
-        print(Please recheck your input)
-    return isvalid
+        valid = False
+    if not valid:
+        print("Please recheck your input")
+    return valid
 
-def graphsol(xvals, yvals): # pragma: no cover
+def graphsol(xvals, yvals):
     """Graphs the aproximate solution to a differential equation
 
     Args:
         xvals (list): A list of x coordinates of points
         yvals (list): A corresponding list of y coordinates of points in the solution
+        yvals (list of np.arrays): Alternatively, a corresponding list of y coordinates of points in the solutions
     """
-    plt.plot(xvals,yvals)
-    plt.xlim(min(0, min(xvals)-1), max(0, max(xvals)+1))
-    plt.ylim(min(0, min(yvals)-1), max(0, max(yvals)+1))
+    if isinstance(yvals[0], np.ndarray):
+        yvals0 = [yvals[i][0] for i in np.arange(len(yvals))]
+        yvals1 = [yvals[i][1] for i in np.arange(len(yvals))]
+        plt.plot(xvals, yvals0, 'g')
+        plt.plot(xvals, yvals1, 'b')
+        plt.xlim(min(0, min(xvals)-1), max(0, max(xvals)+1))
+        plt.ylim(min(0, min(yvals0), min(yvals1))-1, max(0, max(yvals0), max(yvals1))+1)
+    else:
+        plt.plot(xvals,yvals)
+        plt.xlim(min(0, min(xvals)-1), max(0, max(xvals)+1))
+        plt.ylim(min(0, min(yvals)-1), max(0, max(yvals)+1))
     plt.show()
 
 def euleriteration(xi, yi, h, f):
