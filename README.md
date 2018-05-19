@@ -6,3 +6,5 @@
 
 # eulers
 Uses Euler's method to approximate solutions to differential equations
+
+Full API Documentation available at [github pages](https://suzannastep.github.io/solver/html).  

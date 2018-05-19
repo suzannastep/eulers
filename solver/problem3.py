@@ -1,4 +1,4 @@
-import algorithms as alg
+import solver.algorithms as alg
 
 def problem3(t0, tf, n, a, b, returnlist=False):
     """Uses Euler's method to graph velocity of an object subject to friction and approximate terminal velocity
@@ -14,6 +14,7 @@ def problem3(t0, tf, n, a, b, returnlist=False):
 
     Returns:
         solution (list): Points on the graph of the approximate solution as a list of tuples
+        terminalvelocity (float): An approximation of the terminal velocity
     """
     print("Problem 3: ~Terminal Velocity~ dv/dt = a - bv")
     def vel(t, v):
@@ -23,7 +24,7 @@ def problem3(t0, tf, n, a, b, returnlist=False):
     print("Graph of approximate solution")
     print("Time step of %f seconds." % h)
     solution = alg.euler(t0, tf, n, 0, vel)
-    terminalvelocity = solution[n-1][1]
+    terminalvelocity = solution[-1][1]
     print("Conclusion: Terminal velocity is about %f." % terminalvelocity)
     if returnlist:
         return solution, terminalvelocity

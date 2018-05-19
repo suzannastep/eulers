@@ -1,4 +1,4 @@
-import algorithms as alg
+import solver.algorithms as alg
 import numpy as np
 
 def problem5(t0, tf, NA0, NB0, tau, n, returnlist=False):

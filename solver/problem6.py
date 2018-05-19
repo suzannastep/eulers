@@ -1,4 +1,4 @@
-import algorithms as alg
+import solver.algorithms as alg
 
 def problem6(t0, tf, N0, n, a, b, returnlist=False):
     """Uses Euler's method to graph the size of a population based on the model dN/dt = aN - bN^2.
