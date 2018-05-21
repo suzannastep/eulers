@@ -35,8 +35,8 @@ def test_improvedeuleriteration():
 
     def f(x,y):
         return x**2/y
-    assert round(improvedeuleriteration(.2, 9, .2, f),5) == 9.00222
-    assert round(improvedeuleriteration(.8, 9.01909106791, .2, f),5) == 9.03726
+    assert round(improvedeuleriteration(.2, 9, .2, f), 5) == 9.00222
+    assert round(improvedeuleriteration(.8, 9.01909106791, .2, f), 5) == 9.03726
 
     def g(x,y):
         return -1 + 2*x - 2*y
@@ -100,6 +100,7 @@ def test_problem3():
     assert solution1[0] == (0, 0)
     assert solution1[-1][0] == 20
     assert round(solution1[-10][1], 5) == 2
+    assert round(problem3(0, 20, 100, 4, 2, False), 5) == 2
 
 def test_problem4():
     from solver.problem4 import problem4

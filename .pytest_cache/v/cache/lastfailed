@@ -1,15 +1,1 @@
-{
-  "tests/test_solver.py::test_euler": true,
-  "tests/test_solver.py::test_euleriteration": true,
-  "tests/test_solver.py::test_improvedeuler": true,
-  "tests/test_solver.py::test_improvedeuleriteration": true,
-  "tests/test_solver.py::test_problem1": true,
-  "tests/test_solver.py::test_problem2": true,
-  "tests/test_solver.py::test_problem3": true,
-  "tests/test_solver.py::test_problem4": true,
-  "tests/test_solver.py::test_problem5": true,
-  "tests/test_solver.py::test_problem6": true,
-  "tests/test_solver.py::test_rungekutta": true,
-  "tests/test_solver.py::test_rungekuttaiteration": true,
-  "tests/test_solver.py::test_validinput": true
-}
+{}

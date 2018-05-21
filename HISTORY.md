@@ -6,3 +6,6 @@
   build status, code coverage, and code quality.
 - Added files for Travis CI.
 - Added files to create python package.
+
+## Revision 0.0.2
+- Changed testing to py35 to avoid issues with Travic CI running tox on a virtual environment
