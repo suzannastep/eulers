@@ -125,7 +125,7 @@ def improvedeuler(x0, xf, n, y0, f, graph=True):
         for i in np.arange(n-1):
             yvals.append(improvedeuleriteration(xvals[i], yvals[i], h, f)) #append y_{i+1}
         if graph:
-            graphsol(xvals, yvals) #pragma
+            graphsol(xvals, yvals) #pragma: no cover
         pointlist = [(xvals[i], yvals[i]) for i in np.arange(n)]
         return pointlist
 
@@ -169,6 +169,6 @@ def rungekutta(x0, xf, n, y0, f, graph=True):
         for i in np.arange(n-1):
             yvals.append(rungekuttaiteration(xvals[i], yvals[i], h, f)) #append y_{i+1}
         if graph:
-            graphsol(xvals, yvals) #pragma
+            graphsol(xvals, yvals) #pragma: no cover
         pointlist = [(xvals[i], yvals[i]) for i in np.arange(n)]
         return pointlist
